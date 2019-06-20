@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.zestworks.currencyapplication.R
 import com.zestworks.currencyapplication.model.Result
 
-class CurrencyListAdapter(val results:List<Result>) : RecyclerView.Adapter<CurrencyListAdapter.CurrencyViewHolder>(){
+class CurrencyListAdapter(results:List<Result>) : RecyclerView.Adapter<CurrencyListAdapter.CurrencyViewHolder>(){
     private var resultList : MutableList<Result> = results as MutableList<Result>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CurrencyViewHolder {

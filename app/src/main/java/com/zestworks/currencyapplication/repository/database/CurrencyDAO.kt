@@ -1,9 +1,10 @@
-package com.zestworks.currencyapplication.model
+package com.zestworks.currencyapplication.repository.database
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.zestworks.currencyapplication.model.Result
 
 @Dao
 interface CurrencyDAO {

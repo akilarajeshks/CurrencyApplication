@@ -2,8 +2,8 @@ package com.zestworks.currencyapplication.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.zestworks.currencyapplication.model.CurrencyRepo
 import com.zestworks.currencyapplication.model.Result
+import com.zestworks.currencyapplication.repository.CurrencyRepo
 
 class CurrencyViewModel(private val currencyRepo: CurrencyRepo) : ViewModel() {
 

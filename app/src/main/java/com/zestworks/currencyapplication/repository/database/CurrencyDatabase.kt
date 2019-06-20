@@ -1,9 +1,10 @@
-package com.zestworks.currencyapplication.model
+package com.zestworks.currencyapplication.repository.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.zestworks.currencyapplication.model.Result
 
 @Database(entities = [Result::class],version = 1)
 abstract class CurrencyDatabase : RoomDatabase() {
