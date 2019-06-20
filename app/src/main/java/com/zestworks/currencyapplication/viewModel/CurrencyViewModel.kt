@@ -3,9 +3,9 @@ package com.zestworks.currencyapplication.viewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.zestworks.currencyapplication.model.Result
-import com.zestworks.currencyapplication.repository.CurrencyRepo
+import com.zestworks.currencyapplication.repository.network.Repository
 
-class CurrencyViewModel(private val currencyRepo: CurrencyRepo) : ViewModel() {
+class CurrencyViewModel(private val currencyRepo: Repository) : ViewModel() {
 
     val currentState = MutableLiveData<State>()
 
