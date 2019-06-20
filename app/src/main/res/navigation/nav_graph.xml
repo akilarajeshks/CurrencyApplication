@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/loaderFragment">
+
+    <fragment android:id="@+id/loaderFragment" android:name="com.zestworks.currencyapplication.view.LoaderFragment"
+              android:label="fragment_loader" tools:layout="@layout/fragment_loader">
+        <action android:id="@+id/action_loaderFragment_to_currencyListFragment"
+                app:destination="@id/currencyListFragment"/>
+        <action android:id="@+id/action_loaderFragment_to_errorFragment" app:destination="@id/errorFragment"/>
+    </fragment>
+    <fragment android:id="@+id/currencyListFragment"
+              android:name="com.zestworks.currencyapplication.view.CurrencyListFragment"
+              android:label="fragment_currency_list" tools:layout="@layout/fragment_currency_list"/>
+    <fragment android:id="@+id/errorFragment" android:name="com.zestworks.currencyapplication.view.ErrorFragment"
+              android:label="fragment_error" tools:layout="@layout/fragment_error"/>
+</navigation>

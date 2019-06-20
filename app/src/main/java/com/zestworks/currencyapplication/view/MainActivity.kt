@@ -1,7 +1,8 @@
-package com.zestworks.currencyapplication
+package com.zestworks.currencyapplication.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.zestworks.currencyapplication.R
 
 class MainActivity : AppCompatActivity() {
 
