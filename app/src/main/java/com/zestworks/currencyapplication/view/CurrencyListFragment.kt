@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.zestworks.currencyapplication.R
 import com.zestworks.currencyapplication.viewModel.CurrencyViewModel
 import com.zestworks.currencyapplication.viewModel.ViewModelFactory
@@ -35,7 +36,14 @@ class CurrencyListFragment : Fragment() {
             when(it){
                 is CurrencyViewModel.State.Success -> {
                     val currency = it.results
-                    currency_list_text.text = currency.toString()
+                    if(currency_recycler.adapter != null){
+                        (currency_recycler.adapter as CurrencyListAdapter).updateResults(currency)
+                    }else{
+                        currency_recycler.apply {
+                            adapter = CurrencyListAdapter(currency)
+                            layoutManager = LinearLayoutManager(context)
+                        }
+                    }
                 }
                 is CurrencyViewModel.State.Error -> {}
                 CurrencyViewModel.State.Loading -> {}

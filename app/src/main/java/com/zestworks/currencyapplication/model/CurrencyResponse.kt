@@ -33,7 +33,7 @@ data class Result(
     @SerializedName("CoinType") @ColumnInfo(name = "CoinType")
     var coinType: String = "",
     @SerializedName("BaseAddress") @ColumnInfo(name = "BaseAddress")
-    var baseAddress: String = "",
+    var baseAddress: String? = null,
     @SerializedName("Notice") @ColumnInfo(name = "Notice")
-    var notice: String? = null
+    var notice: String? =  null
 )
